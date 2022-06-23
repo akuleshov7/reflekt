@@ -33,7 +33,10 @@ junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", vers
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
 kotlin-compile-testing = { module = "com.github.tschuchortdev:kotlin-compile-testing", version.ref = "kotlin-compile-testing" }
+kotlin-compiler = { module = "org.jetbrains.kotlin:kotlin-compiler", version.ref = "kotlin" }
+kotlin-compiler-internal-test-framework = { module = "org.jetbrains.kotlin:kotlin-compiler-internal-test-framework", version.ref = "kotlin" }
 kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "kotlinx-serialization-protobuf" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 reflections = { module = "org.reflections:reflections", version.ref = "reflections" }
 tomlj = { module = "org.tomlj:tomlj", version.ref = "tomlj" }
 zip4j = { module = "net.lingala.zip4j:zip4j", version.ref = "zip4j" }

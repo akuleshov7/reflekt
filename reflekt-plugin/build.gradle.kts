@@ -20,19 +20,37 @@ dependencies {
     implementation(project(":reflekt-core"))
     implementation(project(":reflekt-dsl"))
 
-    testImplementation(gradleTestKit())
-
     implementation(libs.kotlinpoet)
     implementation(libs.reflections)
 
     implementation(libs.kotlinx.serialization.protobuf)
 
+    testImplementation(gradleTestKit())
     testImplementation(libs.junit.jupiter.api)
     testImplementation(libs.junit.jupiter.params)
     testRuntimeOnly(libs.junit.jupiter.engine)
     testImplementation(libs.tomlj)
     testImplementation(libs.gson)
     testImplementation(libs.kotlin.compile.testing)
+
+    testImplementation(libs.kotlin.compiler)
+    testImplementation(libs.kotlin.compiler.internal.test.framework)
+    testImplementation("org.junit.platform:junit-platform-launcher:1.8.2")
+
+    testImplementation("junit:junit:4.13.2")
+    // This dependency is needed only for FileComparisonFailure
+    testImplementation("com.jetbrains.intellij.java:java-rt:221.5787.30")
+
+
+
+// вот это все не нужно по итогу, это я экспериментировала
+// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-compiler-internal-test-framework
+//    testImplementation("org.jetbrains.kotlin:kotlin-compiler-internal-test-framework:1.6.21")
+//    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.8.2")
+//    testImplementation("com.jetbrains.intellij.platform:util:221.5591.52")
+
+//    testRuntimeOnly("org.junit.platform:junit-platform-commons:1.8.2")
+
 }
 
 tasks.withType<Test> {

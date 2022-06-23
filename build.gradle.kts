@@ -26,6 +26,9 @@ allprojects {
     repositories {
         mavenCentral()
         google()
+        maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap")
+        maven("https://www.jetbrains.com/intellij-repository/releases/")
+
         // Uncomment it for using the last kotlin compiler version
         // The full list of the build can be found here:
         // https://teamcity.jetbrains.com/buildConfiguration/Kotlin_KotlinPublic_BuildNumber?mode=builds&tag=bootstrap
@@ -56,7 +59,7 @@ subprojects {
         repositories {
             maven {
                 name = "SpacePackages"
-                url = uri("https://packages.jetbrains.team/maven/p/reflekt/reflekt")
+//                url = uri("https://packages.jetbrains.team/maven/p/reflekt/reflekt")
                 credentials {
                     username = System.getenv("JB_SPACE_CLIENT_ID")?.takeIf { it.isNotBlank() } ?: ""
                     password = System.getenv("JB_SPACE_CLIENT_SECRET")?.takeIf { it.isNotBlank() } ?: ""

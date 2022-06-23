@@ -8,6 +8,10 @@ include(":gradle-plugin")
 pluginManagement {
     repositories {
         gradlePluginPortal()
+        maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap")
+        maven("https://www.jetbrains.com/intellij-repository/releases/")
+
+
         // Uncomment it for using the last kotlin compiler version
         // The full list of the build can be found here:
         // https://teamcity.jetbrains.com/buildConfiguration/Kotlin_KotlinPublic_BuildNumber?mode=builds&tag=bootstrap
